@@ -11,8 +11,8 @@ import (
 const BufferSize = 1024
 
 /*
- * Compress all files given in 'files'
- * the files must be absolute path
+ * Compress the file 'file' to the gzip file 'zip'
+ * The files must be absolute path
  */
 func Compress(zip, file string) error {
 	fout, err := os.OpenFile(zip, os.O_WRONLY|os.O_CREATE, 0640)
